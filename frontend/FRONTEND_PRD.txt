@@ -1,0 +1,76 @@
+3. The Frontend (UI/UX)
+Goal: Visualizing progress and enabling rapid logging.
+
+3.1 Technology Stack
+Framework: React (Vite).
+
+Styling: Tailwind CSS (for easy grid/color utility classes).
+
+State Management: React Query (ideal for syncing server state with UI).
+
+3.2 View 1: The Dashboard (Home)
+Layout: A vertical list of Topic Cards.
+
+Topic Card:
+
+Header: Topic Name | Date | Progress Bar.
+
+Progress Bar: Calculated as: (Count of problems with history.length > 0) / (Total problems).
+
+Body (Expanded): A grid of buttons representing problems.
+
+The "Heatmap" Buttons:
+
+Each problem is a button displaying its label (e.g., "12").
+
+Color Logic: The button's background color is derived from the last item in its history array.
+
+Empty History -> bg-gray-100 (Unattempted).
+
+Last: "easy" -> bg-green-500.
+
+Last: "medium" -> bg-yellow-400.
+
+Last: "hard" -> bg-red-500.
+
+Interaction:
+
+Hover: Shows tooltip: "Last attempted: Feb 16 (Hard)".
+
+Click: Opens a small "Rate this problem" modal/popover with three options (Easy/Med/Hard). Clicking one sends POST /api/attempt.
+
+3.3 View 2: Review Mode
+Goal: Surface problems that need attention.
+
+Filter Logic: The frontend iterates through the data and displays a problem IF:
+
+Struggle: Most recent history entry is "Hard".
+
+Decay: Most recent history entry is > 7 days old (regardless of rating).
+
+Unfinished: Problem has history.length === 0 (Optional toggle: "Show Unattempted").
+
+Action: Review cards allow the user to rate the problem directly from this view. Once rated "Easy", it vanishes from the list.
+
+4. Interaction Flow Diagram
+User uploads image → Parser creates study_data.json.
+
+Frontend mounts → Calls GET /api/syllabus.
+
+Backend reads file → returns JSON.
+
+User sees "Topic: Binary Search Trees".
+
+User clicks "Problem 5" (currently Gray).
+
+User selects "Hard".
+
+Frontend optimistically updates button to Red.
+
+Frontend sends POST /api/attempt (with timestamp).
+
+Backend appends "Hard" entry to Problem 5's history list in study_data.json.
+
+User returns 1 week later → Problem 5 is still Red.
+
+User clicks "Review Mode" → Problem 5 appears because it is marked "Hard".

@@ -1,0 +1,43 @@
+2. The Backend (API & State)
+Goal: Serve the data to the frontend and handle the logic of "logging an attempt" without overwriting past data.
+
+2.1 Technology Stack
+Framework: Python FastAPI (lightweight, easy to run locally).
+
+Storage: Direct Read/Write to study_data.json.
+
+2.2 API Endpoints
+GET /api/syllabus
+Function: Reads study_data.json and sends it to the frontend.
+
+Response: The full JSON object.
+
+POST /api/attempt
+Function: Logs a user's interaction with a specific problem.
+
+Payload:
+
+JSON
+{
+  "topic_id": "topic_001",
+  "problem_id": "bst_1a",
+  "rating": "hard",  // enum: "easy", "medium", "hard"
+  "timestamp": "2026-02-16T10:30:00Z" // ISO 8601
+}
+]
+Logic:
+
+Load study_data.json.
+
+Find the specific problem object.
+
+Append (do not replace) the payload to the history array.
+
+Save file.
+
+Return success message.
+
+2.3 Data Integrity
+Concurrency: Since this is a local single-user app, we don't need complex database locking. Standard file I/O is sufficient.
+
+Backup: On startup, the backend should create a copy (study_data.backup.json) in case a write error corrupts the main file.

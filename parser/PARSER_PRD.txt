@@ -1,0 +1,59 @@
+1. The Parser (AI Data Ingestion)
+Goal: Convert a raw image of a syllabus into a structured, granular JSON database.
+
+1.1 Inputs & Outputs
+Input: JPEG/PNG screenshot of a syllabus table (containing columns for Dates, Topics, and Problem sets).
+
+Output: study_data.json (The "Golden Record").
+
+1.2 The "Explosion" Logic (Prompt Engineering)
+The core complexity is converting shorthand notation into actionable items. The LLM System Prompt must enforce the following rules:
+
+Range Expansion: If the text says 12-15, the output must be an array: ["12", "13", "14", "15"].
+
+Sub-Problem Splitting: If the text says 6ab, the output must be: ["6a", "6b"].
+
+Noise Removal: Rows like "Snow Day" or "Exam 1" should be ignored or flagged as non-problem rows.
+
+1.3 Target JSON Schema
+This is the structure the Parser must generate.
+
+JSON
+{
+  "course_title": "Algorithms",
+  "topics": [
+    {
+      "id": "topic_001",
+      "date": "2/11",
+      "name": "Binary Search Trees",
+      "problems": [
+        {
+          "id": "bst_1a", 
+          "label": "1a",
+          "history": [] 
+        },
+        {
+          "id": "bst_2",
+          "label": "2",
+          "history": []
+        }
+      ]
+    }
+  ]
+}
+1.4 Implementation Strategy
+Script: Python (parser.py).
+
+Library: google-generativeai (Gemini Vision) or openai (GPT-4o).
+
+Action:
+
+User drops image into the project folder.
+
+Run python parser.py.
+
+Script sends image + schema instructions to LLM.
+
+Script validates JSON (checks for syntax errors).
+
+Script writes study_data.json.

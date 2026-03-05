@@ -1,0 +1,121 @@
+Gemini said
+Here is the updated Frontend Product Requirements Document (PRD), revised to integrate shadcn/ui for a polished, accessible, and professional design.
+
+Frontend PRD: AlgoTracker UI (with Shadcn)
+1. Overview
+The frontend is a single-page application (SPA) designed for rapid interaction. It visualizes the study schedule and provides a friction-free interface for logging difficulty ratings. By using shadcn/ui, we ensure accessibility, consistent styling, and a modern aesthetic with minimal custom CSS.
+
+2. Technical Stack
+Framework: React (Vite) + TypeScript.
+
+Styling: Tailwind CSS (Utility classes).
+
+Component Library: shadcn/ui (Built on Radix UI primitives).
+
+State Management: React Query (TanStack Query) for data fetching and caching.
+
+Icons: Lucide React (Standard with shadcn).
+
+3. Core Shadcn Components to Implement
+You will install these specific components via the CLI (npx shadcn-ui@latest add [component]).
+
+Feature	Shadcn Component	Usage
+Topic Container	Card	Wraps each syllabus topic. Uses CardHeader for title/date and CardContent for the problem grid.
+Progress	Progress	A simple linear bar in the CardHeader showing completion %.
+Problem Button	Button	The primary interactive element. We will use variant props to handle states (outline = unattempted, destructive = hard, etc.).
+Rating Interaction	Popover	Clicking a problem button triggers a PopoverContent with the 3 difficulty choices.
+Navigation	Tabs	Switches the main view between "Dashboard", "Review", and "Settings".
+Status/Tags	Badge	Displays metadata like "Exam 1" or "Snow Day" rows.
+Review Queue	ScrollArea	Handles the list of review items if they overflow the viewport.
+Empty States	Alert	Shows helpful messages when the Review queue is empty.
+4. View Architecture
+4.1 Global Layout
+Structure: A centered layout using a max-w-4xl container.
+
+Navigation: Top-level Tabs component:
+
+TabsList: [ Dashboard | Review Queue | Add Schedule ]
+
+TabsContent: Renders the respective view.
+
+4.2 View: The Dashboard (Home)
+Component: TopicList.tsx
+
+UI Logic:
+
+Iterate through study_data.topics.
+
+Render a Card for each topic.
+
+Header: <CardTitle> displays "Binary Search Trees" and the date. <Progress value={45} /> sits below the title.
+
+Grid: A responsive grid (grid-cols-4 md:grid-cols-8 gap-2) inside CardContent.
+
+The Problem Component (ProblemButton.tsx):
+
+Uses the Popover primitive.
+
+Trigger: A Button with dynamic styling based on the latest history entry:
+
+Unattempted: variant="outline" (White/Gray).
+
+Hard: variant="destructive" (Red).
+
+Medium: className="bg-yellow-500 hover:bg-yellow-600 text-white" (Custom utility, as shadcn default doesn't have yellow).
+
+Easy: className="bg-green-600 hover:bg-green-700 text-white".
+
+Content: Inside the popover, three mini-buttons appear:
+
+[ 🟢 Easy ] [ 🟡 Medium ] [ 🔴 Hard ]
+
+4.3 View: Review Mode
+Component: ReviewQueue.tsx
+
+Layout: A vertical stack of Card components, but focused on individual problems rather than topics.
+
+Logic:
+
+Filter study_data for problems where last_attempt == "hard" OR last_attempt_date > 7 days.
+
+Card Design:
+
+Left side: "AVL Trees: Problem 12".
+
+Right side: A Badge saying "Last: Hard (3 days ago)".
+
+Bottom: The same rating buttons as the dashboard to allow immediate re-rating.
+
+4.4 View: Ingestion (Add Schedule)
+Component: UploadView.tsx
+
+UI Elements:
+
+Input type="file" (styled with a label wrapper).
+
+Button ("Process Schedule") that triggers the backend parser.
+
+Accordion (Shadcn) to show a preview of the parsed JSON before confirming.
+
+5. Interaction & State (React Query)
+Fetching Data:
+
+useQuery(['syllabus']) calls GET /api/syllabus.
+
+Mutating Data:
+
+useMutation calls POST /api/attempt.
+
+Optimistic Updates: When the user clicks "Hard", immediately update the button color in the React cache before the API response comes back. This makes the app feel instant.
+
+6. Design System (Tailwind Config)
+To support the specific "Traffic Light" colors needed for this specific study app, extend the tailwind.config.js or CSS variables within Shadcn's layer:
+
+CSS
+/* In globals.css */
+@layer utilities {
+  .bg-study-hard { @apply bg-red-500 hover:bg-red-600 text-white; }
+  .bg-study-medium { @apply bg-yellow-500 hover:bg-yellow-600 text-white; }
+  .bg-study-easy { @apply bg-green-500 hover:bg-green-600 text-white; }
+}
+This allows you to pass className={getStatusColor(problem.history)} to the Shadcn Button component cleanly.

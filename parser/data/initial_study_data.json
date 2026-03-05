@@ -1,0 +1,1144 @@
+{
+  "course_title": "Data Structures",
+  "topics": [
+    {
+      "id": "topic_001",
+      "date": "W 2/4",
+      "name": "preliminaries",
+      "problems": [
+        {
+          "id": "pre_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "pre_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "pre_6a",
+          "label": "6a",
+          "history": []
+        },
+        {
+          "id": "pre_6b",
+          "label": "6b",
+          "history": []
+        },
+        {
+          "id": "pre_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "pre_9",
+          "label": "9",
+          "history": []
+        },
+        {
+          "id": "pre_10",
+          "label": "10",
+          "history": []
+        },
+        {
+          "id": "pre_12",
+          "label": "12",
+          "history": []
+        },
+        {
+          "id": "pre_13",
+          "label": "13",
+          "history": []
+        },
+        {
+          "id": "pre_14",
+          "label": "14",
+          "history": []
+        },
+        {
+          "id": "pre_15",
+          "label": "15",
+          "history": []
+        },
+        {
+          "id": "pre_16",
+          "label": "16",
+          "history": []
+        },
+        {
+          "id": "pre_17",
+          "label": "17",
+          "history": []
+        },
+        {
+          "id": "pre_18",
+          "label": "18",
+          "history": []
+        },
+        {
+          "id": "pre_19",
+          "label": "19",
+          "history": []
+        },
+        {
+          "id": "pre_20",
+          "label": "20",
+          "history": []
+        },
+        {
+          "id": "pre_21",
+          "label": "21",
+          "history": []
+        },
+        {
+          "id": "pre_22",
+          "label": "22",
+          "history": []
+        },
+        {
+          "id": "pre_23",
+          "label": "23",
+          "history": []
+        },
+        {
+          "id": "pre_25",
+          "label": "25",
+          "history": []
+        },
+        {
+          "id": "pre_26",
+          "label": "26",
+          "history": []
+        },
+        {
+          "id": "pre_27",
+          "label": "27",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_002",
+      "date": "F 2/6",
+      "name": "amortized analysis of cost (aggregate method)",
+      "problems": [
+        {
+          "id": "aacam_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "aacam_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "aacam_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "aacam_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "aacam_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "aacam_17",
+          "label": "17",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_003",
+      "date": "M 2/9",
+      "name": "amortized analysis of cost (token method)",
+      "problems": [
+        {
+          "id": "aactm_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "aactm_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "aactm_19",
+          "label": "19",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_004",
+      "date": "W 2/11",
+      "name": "binary search trees",
+      "problems": [
+        {
+          "id": "bst_1a",
+          "label": "1a",
+          "history": []
+        },
+        {
+          "id": "bst_1b",
+          "label": "1b",
+          "history": []
+        },
+        {
+          "id": "bst_1c",
+          "label": "1c",
+          "history": []
+        },
+        {
+          "id": "bst_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "bst_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "bst_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "bst_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "bst_10",
+          "label": "10",
+          "history": []
+        },
+        {
+          "id": "bst_11",
+          "label": "11",
+          "history": []
+        },
+        {
+          "id": "bst_12",
+          "label": "12",
+          "history": []
+        },
+        {
+          "id": "bst_13",
+          "label": "13",
+          "history": []
+        },
+        {
+          "id": "bst_14",
+          "label": "14",
+          "history": []
+        },
+        {
+          "id": "bst_15",
+          "label": "15",
+          "history": []
+        },
+        {
+          "id": "bst_16",
+          "label": "16",
+          "history": []
+        },
+        {
+          "id": "bst_17",
+          "label": "17",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_005",
+      "date": "F 2/13",
+      "name": "avl trees (definition, balance, height bound)",
+      "problems": [
+        {
+          "id": "avldbhb_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "avldbhb_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "avldbhb_9",
+          "label": "9",
+          "history": []
+        },
+        {
+          "id": "avldbhb_12",
+          "label": "12",
+          "history": []
+        },
+        {
+          "id": "avldbhb_19",
+          "label": "19",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_006",
+      "date": "M 2/16",
+      "name": "avl trees (rotations, start of insertions)",
+      "problems": [
+        {
+          "id": "avlrsi_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "avlrsi_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "avlrsi_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "avlrsi_16",
+          "label": "16",
+          "history": []
+        },
+        {
+          "id": "avlrsi_17",
+          "label": "17",
+          "history": []
+        },
+        {
+          "id": "avlrsi_18",
+          "label": "18",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_007",
+      "date": "F 2/21",
+      "name": "avl trees (finish insertions, deletion)",
+      "problems": [
+        {
+          "id": "avlfid_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "avlfid_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "avlfid_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "avlfid_15",
+          "label": "15",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_008",
+      "date": "M 2/23",
+      "name": "b trees (intro, definition, height theorems)",
+      "problems": [
+        {
+          "id": "btidht_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "btidht_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "btidht_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "btidht_11",
+          "label": "11",
+          "history": []
+        },
+        {
+          "id": "btidht_12",
+          "label": "12",
+          "history": []
+        },
+        {
+          "id": "btidht_19",
+          "label": "19",
+          "history": []
+        },
+        {
+          "id": "btidht_20",
+          "label": "20",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_009",
+      "date": "W 2/25",
+      "name": "b trees (insertion, rotations, split-and-promote)",
+      "problems": [
+        {
+          "id": "btirsp_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "btirsp_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "btirsp_13",
+          "label": "13",
+          "history": []
+        },
+        {
+          "id": "btirsp_16",
+          "label": "16",
+          "history": []
+        },
+        {
+          "id": "btirsp_21",
+          "label": "21",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_010",
+      "date": "F 2/27",
+      "name": "b trees (deletion, rotations, demote-and-merge)",
+      "problems": [
+        {
+          "id": "btdrdm_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "btdrdm_6a",
+          "label": "6a",
+          "history": []
+        },
+        {
+          "id": "btdrdm_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "btdrdm_17",
+          "label": "17",
+          "history": []
+        },
+        {
+          "id": "btdrdm_21",
+          "label": "21",
+          "history": []
+        },
+        {
+          "id": "btdrdm_22",
+          "label": "22",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_011",
+      "date": "M 3/2",
+      "name": "scapegoat trees (balance, informalities, formalities, rebuilding)",
+      "problems": [
+        {
+          "id": "sgtbifr_19",
+          "label": "19",
+          "history": []
+        },
+        {
+          "id": "sgtbifr_20",
+          "label": "20",
+          "history": []
+        },
+        {
+          "id": "sgtbifr_21",
+          "label": "21",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_012",
+      "date": "W 3/4",
+      "name": "scapegoat trees (insert, delete, math proofs)",
+      "problems": [
+        {
+          "id": "sgtidmp_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_4a",
+          "label": "4a",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_10",
+          "label": "10",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_11",
+          "label": "11",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_12",
+          "label": "12",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_13",
+          "label": "13",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_15",
+          "label": "15",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_16",
+          "label": "16",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_17",
+          "label": "17",
+          "history": []
+        },
+        {
+          "id": "sgtidmp_18",
+          "label": "18",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_013",
+      "date": "M 3/9",
+      "name": "scapegoat trees (amortized analysis)",
+      "problems": [
+        {
+          "id": "sgtaa_9",
+          "label": "9",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_014",
+      "date": "W 3/11",
+      "name": "splay trees (intro, the splay operation, search)",
+      "problems": [
+        {
+          "id": "stisos_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "stisos_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "stisos_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "stisos_9",
+          "label": "9",
+          "history": []
+        },
+        {
+          "id": "stisos_13",
+          "label": "13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_015",
+      "date": "F 3/13",
+      "name": "splay trees (insertion and deletion methods, time complexity)",
+      "problems": [
+        {
+          "id": "stiadmtc_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "stiadmtc_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "stiadmtc_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "stiadmtc_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "stiadmtc_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "stiadmtc_10",
+          "label": "10",
+          "history": []
+        },
+        {
+          "id": "stiadmtc_11",
+          "label": "11",
+          "history": []
+        },
+        {
+          "id": "stiadmtc_12",
+          "label": "12",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_016",
+      "date": "M 3/23",
+      "name": "ekd trees (intro, split types, insertion)",
+      "problems": [
+        {
+          "id": "ekditsi_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "ekditsi_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "ekditsi_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "ekditsi_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "ekditsi_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "ekditsi_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "ekditsi_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "ekditsi_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "ekditsi_9",
+          "label": "9",
+          "history": []
+        },
+        {
+          "id": "ekditsi_12",
+          "label": "12",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_017",
+      "date": "W 3/25",
+      "name": "ekd trees (search, delete, bounding boxes)",
+      "problems": [
+        {
+          "id": "ekdsdbb_2a",
+          "label": "2a",
+          "history": []
+        },
+        {
+          "id": "ekdsdbb_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "ekdsdbb_5",
+          "label": "5",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_018",
+      "date": "M 3/30",
+      "name": "ekd trees (queries)",
+      "problems": [
+        {
+          "id": "ekdq_2b",
+          "label": "2b",
+          "history": []
+        },
+        {
+          "id": "ekdq_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "ekdq_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "ekdq_8",
+          "label": "8",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_019",
+      "date": "W 4/1",
+      "name": "compressed tries (character tries, compressed trie for a set of strings)",
+      "problems": [
+        {
+          "id": "ctctctss_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "ctctctss_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "ctctctss_8",
+          "label": "8",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_020",
+      "date": "F 4/3",
+      "name": "compressed tries (formal definition, height bounds, search, insert, delete)",
+      "problems": [
+        {
+          "id": "ctfdhbsid_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "ctfdhbsid_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "ctfdhbsid_9",
+          "label": "9",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_021",
+      "date": "M 4/6",
+      "name": "skip lists (perfect and random skip lists, probabilities)",
+      "problems": [
+        {
+          "id": "slprslp_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "slprslp_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "slprslp_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "slprslp_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "slprslp_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "slprslp_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "slprslp_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "slprslp_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "slprslp_9",
+          "label": "9",
+          "history": []
+        },
+        {
+          "id": "slprslp_16",
+          "label": "16",
+          "history": []
+        },
+        {
+          "id": "slprslp_17",
+          "label": "17",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_022",
+      "date": "W 4/8",
+      "name": "skip lists (probability proof, expected number of levels proof, search proof)",
+      "problems": [
+        {
+          "id": "slppeplsp_11",
+          "label": "11",
+          "history": []
+        },
+        {
+          "id": "slppeplsp_15",
+          "label": "15",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_023",
+      "date": "M 4/13",
+      "name": "skip lists (insert, delete, average case with a maximum enforced level)",
+      "problems": [
+        {
+          "id": "slidacmel_12",
+          "label": "12",
+          "history": []
+        },
+        {
+          "id": "slidacmel_13",
+          "label": "13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_024",
+      "date": "W 4/15",
+      "name": "hash functions and tables (hash functions, open and closed addressing)",
+      "problems": [
+        {
+          "id": "hftfoca_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "hftfoca_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "hftfoca_9",
+          "label": "9",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_025",
+      "date": "F 4/17",
+      "name": "hash functions and tables (details of OA/CA, probing, load balancing)",
+      "problems": [
+        {
+          "id": "hftdoacplb_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "hftdoacplb_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "hftdoacplb_7",
+          "label": "7",
+          "history": []
+        },
+        {
+          "id": "hftdoacplb_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "hftdoacplb_10",
+          "label": "10",
+          "history": []
+        },
+        {
+          "id": "hftdoacplb_11",
+          "label": "11",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_026",
+      "date": "M 4/20",
+      "name": "hash functions and tables (amortized analysis)",
+      "problems": [
+        {
+          "id": "hftaa_4",
+          "label": "4",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_027",
+      "date": "W 4/22",
+      "name": "blockchains (non-distributed, distributed, adding data, cryptocurrencies)",
+      "problems": [
+        {
+          "id": "bcnddac_1a",
+          "label": "1a",
+          "history": []
+        },
+        {
+          "id": "bcnddac_1b",
+          "label": "1b",
+          "history": []
+        },
+        {
+          "id": "bcnddac_2",
+          "label": "2",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_028",
+      "date": "M 4/27",
+      "name": "blockchains (merkle trees for transaction verification, market information)",
+      "problems": [
+        {
+          "id": "bcmttvmi_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "bcmttvmi_4",
+          "label": "4",
+          "history": []
+        },
+        {
+          "id": "bcmttvmi_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "bcmttvmi_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "bcmttvmi_7",
+          "label": "7",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_029",
+      "date": "W 4/29",
+      "name": "treaps (definition, creation from pairs, priority choice methods)",
+      "problems": [
+        {
+          "id": "trpsdcfppcm_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "trpsdcfppcm_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "trpsdcfppcm_4a",
+          "label": "4a",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_030",
+      "date": "F 5/1",
+      "name": "treaps (insertion, deletion)",
+      "problems": [
+        {
+          "id": "trpsid_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "trpsid_4b",
+          "label": "4b",
+          "history": []
+        },
+        {
+          "id": "trpsid_5",
+          "label": "5",
+          "history": []
+        },
+        {
+          "id": "trpsid_6",
+          "label": "6",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_031",
+      "date": "M 5/4",
+      "name": "disjoint set data structures (intro, lists, forests, operations version 1)",
+      "problems": [
+        {
+          "id": "dsdsilfov1_1",
+          "label": "1",
+          "history": []
+        },
+        {
+          "id": "dsdsilfov1_5a",
+          "label": "5a",
+          "history": []
+        },
+        {
+          "id": "dsdsilfov1_7",
+          "label": "7",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "topic_032",
+      "date": "W 5/6",
+      "name": "disjoint set data structures (operations version 2, kruskal's algorithm)",
+      "problems": [
+        {
+          "id": "dsdsov2ka_2",
+          "label": "2",
+          "history": []
+        },
+        {
+          "id": "dsdsov2ka_3",
+          "label": "3",
+          "history": []
+        },
+        {
+          "id": "dsdsov2ka_5b",
+          "label": "5b",
+          "history": []
+        },
+        {
+          "id": "dsdsov2ka_6",
+          "label": "6",
+          "history": []
+        },
+        {
+          "id": "dsdsov2ka_8",
+          "label": "8",
+          "history": []
+        },
+        {
+          "id": "dsdsov2ka_9",
+          "label": "9",
+          "history": []
+        },
+        {
+          "id": "dsdsov2ka_10",
+          "label": "10",
+          "history": []
+        }
+      ]
+    }
+  ]
+}
