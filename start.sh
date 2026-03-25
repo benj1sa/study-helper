@@ -54,50 +54,36 @@ cleanup() {
 # Set up trap to cleanup on script exit
 trap cleanup SIGINT SIGTERM EXIT
 
-# Setup Python virtual environment
-echo -e "${BLUE}Setting up Python environment...${NC}"
+# Initialize conda (try common locations)
+if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+    source "/opt/miniconda3/etc/profile.d/conda.sh"
+elif [ -f "$HOME/miniconda3/etc/profile.d/conda.sh" ]; then
+    source "$HOME/miniconda3/etc/profile.d/conda.sh"
+elif [ -f "$HOME/anaconda3/etc/profile.d/conda.sh" ]; then
+    source "$HOME/anaconda3/etc/profile.d/conda.sh"
+fi
+
+# Activate conda environment and start backend
+echo -e "${BLUE}Starting backend server...${NC}"
 cd "$BACKEND_DIR"
 
-# Check if venv exists, create if it doesn't
-if [ ! -d "venv" ]; then
-    echo -e "${YELLOW}Virtual environment not found. Creating one...${NC}"
-    python3 -m venv venv
-    if [ $? -ne 0 ]; then
-        echo -e "${YELLOW}Failed to create virtual environment. Using system Python...${NC}"
-        USE_VENV=false
-    else
-        echo -e "${GREEN}Virtual environment created.${NC}"
-        USE_VENV=true
-    fi
-else
-    USE_VENV=true
-fi
-
-# Activate virtual environment and install dependencies if needed
-if [ "$USE_VENV" = true ]; then
-    source venv/bin/activate
-    # Check if requirements are installed
-    if ! python -c "import fastapi" 2>/dev/null; then
-        echo -e "${YELLOW}Installing Python dependencies...${NC}"
-        pip install -q -r requirements.txt
-        if [ $? -ne 0 ]; then
-            echo -e "${YELLOW}Warning: Failed to install some dependencies. Continuing anyway...${NC}"
-        fi
-    fi
-else
-    # Check if requirements are installed in system Python
-    if ! python3 -c "import fastapi" 2>/dev/null; then
-        echo -e "${YELLOW}Warning: FastAPI not found. You may need to install dependencies manually.${NC}"
-        echo -e "${YELLOW}Run: pip install -r backend/requirements.txt${NC}"
+# Free port 8000 if a stale backend (or other process) is still listening — otherwise uvicorn fails with Errno 48.
+if lsof -Pi :8000 -sTCP:LISTEN -t >/dev/null 2>&1; then
+    echo -e "${YELLOW}Port 8000 is in use; stopping existing listener(s)...${NC}"
+    lsof -ti :8000 2>/dev/null | xargs kill -TERM 2>/dev/null || true
+    sleep 1
+    if lsof -Pi :8000 -sTCP:LISTEN -t >/dev/null 2>&1; then
+        lsof -ti :8000 2>/dev/null | xargs kill -KILL 2>/dev/null || true
+        sleep 1
     fi
 fi
 
-# Start backend server
-echo -e "${BLUE}Starting backend server...${NC}"
-if [ "$USE_VENV" = true ]; then
+# Start backend using conda run (more reliable in scripts)
+if command -v conda &> /dev/null; then
+    conda run -n study-help python main.py > /tmp/study-backend.log 2>&1 &
+else
+    echo -e "${YELLOW}Warning: conda not found, using system Python${NC}"
     python main.py > /tmp/study-backend.log 2>&1 &
-else
-    python3 main.py > /tmp/study-backend.log 2>&1 &
 fi
 BACKEND_PID=$!
 

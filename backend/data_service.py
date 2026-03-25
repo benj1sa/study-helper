@@ -18,26 +18,10 @@ def ensure_data_directory() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 
-def get_default_study_data() -> Dict[str, Any]:
-    """Return default empty study data structure."""
-    return {
-        "course_title": "",
-        "topics": []
-    }
-
-
 def initialize_data_file() -> None:
-    """Initialize study data file if it doesn't exist."""
-    ensure_data_directory()
-    
-    if not STUDY_DATA_FILE.exists():
-        # Try to copy from parser data if it exists
-        if PARSER_DATA_FILE.exists():
-            shutil.copy2(PARSER_DATA_FILE, STUDY_DATA_FILE)
-        else:
-            # Create empty structure if no parser data exists
-            default_data = get_default_study_data()
-            save_study_data(default_data)
+    """Copy initial data from parser if backend data file doesn't exist."""
+    if not STUDY_DATA_FILE.exists() and PARSER_DATA_FILE.exists():
+        shutil.copy2(PARSER_DATA_FILE, STUDY_DATA_FILE)
 
 
 def load_study_data() -> Dict[str, Any]:

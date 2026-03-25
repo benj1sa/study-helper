@@ -17,8 +17,7 @@ from data_service import (
     update_streak,
     record_activity,
     award_achievement,
-    find_problem,
-    get_default_study_data
+    find_problem
 )
 from achievements import check_all_achievements, get_all_achievements, get_achievement
 
@@ -57,13 +56,10 @@ async def get_syllabus():
         The complete study_data.json as JSON.
     """
     try:
-        # Ensure data file exists (in case it wasn't initialized)
-        initialize_data_file()
         data = load_study_data()
         return data
     except FileNotFoundError as e:
-        # If file still doesn't exist, return empty structure
-        return get_default_study_data()
+        raise HTTPException(status_code=500, detail=f"Study data file not found: {str(e)}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error loading study data: {str(e)}")
 

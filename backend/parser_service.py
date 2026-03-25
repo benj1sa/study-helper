@@ -63,16 +63,7 @@ Extract all information from the syllabus table. Apply the explosion rules to cr
 def call_gemini_api(image: Image.Image) -> Optional[str]:
     """Call Google Gemini Vision API to parse the syllabus."""
     if not GOOGLE_GEMINI_KEY:
-        raise ValueError(
-            "Google Gemini API key not configured. "
-            "The syllabus upload feature requires a Google Gemini API key. "
-            "To enable this feature:\n"
-            "1. Get an API key from https://makersuite.google.com/app/apikey\n"
-            "2. Create a .env file in the backend directory\n"
-            "3. Add: GOOGLE_GEMINI_KEY=your_api_key_here\n"
-            "4. Restart the backend server\n\n"
-            "Note: The application works without an API key, but the syllabus upload feature will be disabled."
-        )
+        raise ValueError("GOOGLE_GEMINI_KEY not found in environment variables")
     
     model_names = [
         'gemini-pro',
@@ -206,13 +197,9 @@ def parse_syllabus_image(image_bytes: bytes) -> Dict[str, Any]:
         raise ValueError(f"Failed to load image: {e}")
     
     # Call Gemini API
-    try:
-        response_text = call_gemini_api(image)
-        if not response_text:
-            raise Exception("Failed to get response from Gemini API")
-    except ValueError as e:
-        # Re-raise ValueError (API key missing) with user-friendly message
-        raise ValueError(str(e))
+    response_text = call_gemini_api(image)
+    if not response_text:
+        raise Exception("Failed to get response from Gemini API")
     
     # Extract JSON
     json_text = extract_json_from_response(response_text)
